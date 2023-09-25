@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <meta name="description" content="text text text">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="row">
+            <div class="col-auto me-auto left-auto">
+                <h1>ニュースサイト</h1>
+            </div>
+            <div class="col-auto right-auto">
+                <a class="auto-1" href="#">ABOUT</a>
+                <a class="auto-2" href="#">Q&A</a>
+                <a class="auto-3" href="#">CONTACT</a>
+            </div>
+        </div>
+        <div class="search">
+            <form id="searchForm">
+                <input class="input" type="text" id="searchTerm" placeholder="Enter search term here"><br>
+                <input class="submit" type="submit" value="Search">
+            </form>
+        </div>
+        <div class="video-area">
+            <video class="video" src="assets/video/video-top.mp4" webkit-playsinline playsinline muted autoplay loop></video>
+        </div>
+    </header>
+    <main>
+        <div class="location">
+
+            <!-- タブ部分の追加 -->
+            <div class="tabs">
+                <button class="tab red" data-target="newsResults">現在<br class="sp">検索した記事</button>
+                <button class="tab green" data-target="savedResults1">1つ前に<br class="sp">検索した記事</button>
+                <button class="tab blue" data-target="savedResults2">2つ前に<br class="sp">検索した記事</button>
+            </div>
+        
+            <div class="slide-container">
+                <div class="slide">
+                    <h3 id="currentSearchTerm"></h3>
+                    <ul id="newsResults"></ul>
+                </div>
+                <div class="slide">
+                    <h3 id="savedSearchTerm1"></h3>
+                    <ul id="savedResults1"></ul>
+                </div>
+                <div class="slide">
+                    <h3 id="savedSearchTerm2"></h3>
+                    <ul id="savedResults2"></ul>
+                </div>
+            </div>
+        </div>      
+    </main>
+    <script src="assets/js/JavaScript.js"></script>
+    <script src="assets/js/slide.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="assets/js/gsap.js"></script>
+</body>
+</html>
